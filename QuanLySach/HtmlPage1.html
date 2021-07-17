@@ -14,6 +14,20 @@
         <input type="button" value="Search" onclick="find();" />
         <p id="sach" />
     </div>
+    <div>
+        <h2>Thêm sách mới</h2>
+        <p>Title: <input type="text" id="Title" /></p>
+        <p>AuthorName: <input type="text" id="AuthorName" /></p>
+        <p>Price: <input type="text" id="Price" /></p>
+        <button type="submit" id="add-order">Add</button>
+        <button type="submit" id="edit-order">Edit</button>
+    </div>
+    <div>
+        <h2>Xóa sách</h2>
+        <input type="text" id="proId" size="5" />
+        <input type="button" value="Search" onclick="delete(id);" />
+        <p id="sach" />
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         var uri = 'api/sach';
@@ -38,6 +52,16 @@
                     $('#sach').text('Error: ' + err);
                 });
         }
+        //function delete(id){
+        //    console.log(id)
+        //    $.ajax({
+        //        url: uri + "/" + Id,
+        //        type: 'DELETE',
+        //        success: function () {
+        //            getAll();
+        //        }
+        //    })
+        //}
     </script>
 </body>
 </html>
